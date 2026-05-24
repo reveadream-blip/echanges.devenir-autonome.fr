@@ -40,9 +40,8 @@ const newsItems: NewsItem[] = [
     body:
       'Salut à tous,\n\nVous avez sûrement suivi les dernières annonces de Macron et les infos qui tournent en boucle sur les risques...',
     link: {
-      href: 'https://devenirautonome.fr/article-penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite.html',
+      href: '/actualites/penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite',
       label: 'Lire l\'article',
-      external: true,
     },
     facebookLink: {
       href: 'https://www.facebook.com/share/p/1K4ADgcmFd/',

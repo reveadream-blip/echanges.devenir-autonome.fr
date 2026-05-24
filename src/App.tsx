@@ -22,6 +22,7 @@ import { MessagesThreadPage } from './pages/MessagesThreadPage'
 import { AdminDashboardPage } from './pages/AdminDashboardPage'
 import { TrocDetailPage } from './pages/TrocDetailPage'
 import { ActualitesPage } from './pages/ActualitesPage'
+import { ActualiteArticlePage } from './pages/ActualiteArticlePage'
 import { SoutenirPage } from './pages/SoutenirPage'
 import { TrocPage } from './pages/TrocPage'
 
@@ -37,6 +38,7 @@ export default function App() {
             <Route path="carte" element={<CartePage />} />
             <Route path="informations" element={<InformationsPage />} />
             <Route path="actualites" element={<ActualitesPage />} />
+            <Route path="actualites/:articleId" element={<ActualiteArticlePage />} />
             <Route path="soutenir" element={<SoutenirPage />} />
             <Route path="connexion" element={<LoginPage />} />
             <Route path="inscription" element={<RegisterPage />} />
