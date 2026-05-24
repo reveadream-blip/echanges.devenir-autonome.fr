@@ -1,0 +1,9 @@
+# https://echanges.devenirautonome.fr
+User-agent: *
+Allow: /
+
+# Zones privées ou peu utiles au référencement
+Disallow: /admin
+Disallow: /messages
+
+Sitemap: https://echanges.devenirautonome.fr/sitemap.xml

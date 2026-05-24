@@ -1,0 +1,16 @@
+# API seule — wrangler dev --config wrangler.dev.toml --local
+# Utilisé avec Vite (npm run dev) qui proxy /api vers http://127.0.0.1:8787
+
+name = "echanges-troc-survie-dev"
+main = "worker/index.ts"
+compatibility_date = "2025-05-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "echanges_db"
+database_id = "local-dev"
+migrations_dir = "migrations"
+
+[vars]
+PUBLIC_SITE_URL = "http://localhost:5173"
+MAIL_FROM = "Troc et Survie <onboarding@resend.dev>"

@@ -1,0 +1,29 @@
+# Déploiement production : Worker + assets statiques (dist) + D1
+# 1. Créer la base : wrangler d1 create echanges_db
+# 2. Remplacer database_id ci-dessous par l’UUID affiché
+# 3. Migrations : wrangler d1 migrations apply echanges_db --remote
+# 4. npm run build && wrangler deploy
+
+name = "echanges-troc-survie"
+main = "worker/index.ts"
+compatibility_date = "2025-05-01"
+
+[assets]
+directory = "./dist"
+binding = "ASSETS"
+# Sans ceci, les URLs sans fichier statique (ex. /sitemap.xml) tombent sur le fallback SPA → index.html.
+run_worker_first = true
+
+[[d1_databases]]
+binding = "DB"
+database_name = "echanges_db"
+database_id = "1ddae478-0a17-4c37-b73a-f24bbad81aa6"
+migrations_dir = "migrations"
+
+# Liens dans les e-mails (confirmation / mot de passe oublié)
+[vars]
+PUBLIC_SITE_URL = "https://echanges.devenirautonome.fr"
+MAIL_FROM = "Troc et Survie <noreply@freshrescue.app>"
+
+# Production : wrangler secret put RESEND_API_KEY
+# Webhook Stripe (dons / abonnements → admin) : wrangler secret put STRIPE_WEBHOOK_SECRET
