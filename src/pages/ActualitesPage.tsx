@@ -38,9 +38,7 @@ const newsItems: NewsItem[] = [
     tag: 'Communauté',
     title: 'Pénuries : On fait le point ensemble (sans panique, mais avec lucidité)',
     body:
-      'Salut à tous,
-
-Vous avez sûrement suivi les dernières annonces de Macron et les infos qui tournent en boucle sur les risques...',
+      'Salut à tous,\n\nVous avez sûrement suivi les dernières annonces de Macron et les infos qui tournent en boucle sur les risques...',
     link: {
       href: 'https://devenirautonome.fr/article-penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite.html',
       label: 'Lire l\'article',
