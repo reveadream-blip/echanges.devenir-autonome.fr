@@ -14,37 +14,15 @@ type NewsItem = {
 
 const newsItems: NewsItem[] = [
   {
-    id: 'test-pub-1779605360042',
-    date: '2026-05-24',
-    tag: 'Actualité',
-    title: 'Test publication multisite',
-    body:
-      'Resume test',
-    link: {
-      href: 'https://devenirautonome.fr/article-test-pub-1779605360042.html',
-      label: 'Lire l\'article',
-      external: true,
-    },
-    facebookLink: {
-      href: 'https://www.facebook.com/share/p/1K4ADgcmFd/',
-      label: 'Voir sur Facebook',
-      external: true,
-    },
-  },
-
-  {
-    id: 'penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite',
-    date: '2026-05-24',
+    id: 'salut-a-tous',
+    date: '2026-05-25',
     tag: 'Communauté',
-    title: 'Pénuries : On fait le point ensemble (sans panique, mais avec lucidité)',
+    title: 'Salut à tous,',
     body:
-      'Salut à tous,\n\nVous avez sûrement suivi les dernières annonces de Macron et les infos qui tournent en boucle sur les risques...',
-    link: {
-      href: '/actualites/penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite',
-      label: 'Lire l\'article',
-    },
+      'Salut à tous, Vous avez sûrement suivi les dernières annonces de Macron et les infos qui tournent en boucle sur les risques de pénuries. Entre les tensions au Moyen-Orient (notamment autour du détroit d’Ormuz) et les stations-service qui tirent la langue, on sent que le climat se tend. L\'idée ici n\'est pas de souffler…',
+    link: { href: '/actualites/salut-a-tous', label: 'Lire l\'article' },
     facebookLink: {
-      href: 'https://www.facebook.com/share/p/1K4ADgcmFd/',
+      href: 'https://www.facebook.com/share/p/1E2PtzfCjm/',
       label: 'Voir sur Facebook',
       external: true,
     },
