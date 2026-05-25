@@ -14,19 +14,21 @@ type NewsItem = {
 
 const newsItems: NewsItem[] = [
   {
-    id: 'salut-a-tous',
+    id: 'penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite',
     date: '2026-05-25',
     tag: 'Communauté',
-    title: 'Salut à tous,',
+    title: '🔴 Pénuries : On fait le point ensemble (sans panique, mais avec lucidité)',
     body:
       'Salut à tous, Vous avez sûrement suivi les dernières annonces de Macron et les infos qui tournent en boucle sur les risques de pénuries. Entre les tensions au Moyen-Orient (notamment autour du détroit d’Ormuz) et les stations-service qui tirent la langue, on sent que le climat se tend. L\'idée ici n\'est pas de souffler…',
-    link: { href: '/actualites/salut-a-tous', label: 'Lire l\'article' },
+    link: { href: '/actualites/penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite', label: 'Lire l\'article' },
     facebookLink: {
-      href: 'https://www.facebook.com/share/p/1E2PtzfCjm/',
+      href: 'https://www.facebook.com/share/p/1K4ADgcmFd/',
       label: 'Voir sur Facebook',
       external: true,
     },
   },
+
+    },
 
   {
     id: 'cat-oeuf-volaille',
