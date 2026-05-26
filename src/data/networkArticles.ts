@@ -11,6 +11,17 @@ export type NetworkArticle = {
 
 export const NETWORK_ARTICLES: NetworkArticle[] = [
   {
+    id: 'le-climatiseur-camerounais-qui-rafraichit-autrement',
+    date: '2026-05-26',
+    tag: 'Communauté',
+    category: 'Réseau Autonomie',
+    title: 'Le climatiseur camerounais qui rafraîchit autrement',
+    excerpt: 'Le climatiseur camerounais qui rafraîchit autrement Au Cameroun, Didier Dinamou veut répondre à un problème très concret : comment rafraîchir une pièce dans des zones où la chaleur est intense, où...',
+    contentHtml: '<p>Au Cameroun, Didier Dinamou veut répondre à un problème très concret : comment rafraîchir une pièce dans des zones où la chaleur est intense, où l’électricité coûte cher et où les climatiseurs classiques restent difficiles d’accès ?</p>\n<p>Son idée repose sur un matériau simple : la terre cuite.</p>\n<p>Avec sa start-up Diwa Innovation, ce jeune ingénieur camerounais a conçu un système de climatisation inspiré du refroidissement adiabatique. Le principe est naturel : l’air chaud traverse une surface humidifiée, l’eau s’évapore, et cette évaporation aide à faire baisser la température de l’air.</p>\n<p>La différence, c’est l’adaptation. Au lieu de dépendre d’un climatiseur classique utilisant des gaz réfrigérants, son système mise sur des matériaux locaux, une conception plus sobre et, selon les versions présentées, une alimentation solaire ou une forte réduction de la dépendance à l’électricité conventionnelle.</p>\n<p>Dans des régions chaudes comme l’Extrême-Nord du Cameroun, où les températures peuvent rendre le quotidien difficile, ce type de solution peut changer beaucoup de choses : mieux conserver les aliments, rafraîchir les espaces de vie et proposer une alternative plus accessible aux équipements traditionnels.</p>\n<p>Didier Dinamou ne vend pas seulement une machine. Il défend une idée : utiliser l’ingénierie locale pour créer des solutions adaptées au climat, au territoire et aux besoins réels des habitants.</p>\n<p>Sources :</p>\n<p>Brut Afrique (&quot;Au Cameroun, il conçoit des climatiseurs solaires&quot;, 2025)</p>\n<p>Echos ENR (&quot;Didier Dinamou, l’Ingénieur Camerounais qui rafraîchit le Sahel avec le soleil et la terre&quot;, 5 mars 2026)</p>\n<p>Neozone (&quot;L’invention d’un climatiseur solaire en terre cuite récompensée par un incubateur EDF&quot;, 28 mars 2025)</p>',
+    facebookUrl: 'https://www.facebook.com/share/p/1ChWszhR3S/',
+  },
+
+  {
     id: 'penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite',
     date: '2026-05-25',
     tag: 'Communauté',

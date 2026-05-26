@@ -14,6 +14,21 @@ type NewsItem = {
 
 const newsItems: NewsItem[] = [
   {
+    id: 'le-climatiseur-camerounais-qui-rafraichit-autrement',
+    date: '2026-05-26',
+    tag: 'Communauté',
+    title: 'Le climatiseur camerounais qui rafraîchit autrement',
+    body:
+      'Le climatiseur camerounais qui rafraîchit autrement Au Cameroun, Didier Dinamou veut répondre à un problème très concret : comment rafraîchir une pièce dans des zones où la chaleur est intense, où...',
+    link: { href: '/actualites/le-climatiseur-camerounais-qui-rafraichit-autrement', label: 'Lire l\'article' },
+    facebookLink: {
+      href: 'https://www.facebook.com/share/p/1ChWszhR3S/',
+      label: 'Voir sur Facebook',
+      external: true,
+    },
+  },
+
+  {
     id: 'penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite',
     date: '2026-05-25',
     tag: 'Communauté',
@@ -27,8 +42,6 @@ const newsItems: NewsItem[] = [
       external: true,
     },
   },
-
-    },
 
   {
     id: 'cat-oeuf-volaille',
