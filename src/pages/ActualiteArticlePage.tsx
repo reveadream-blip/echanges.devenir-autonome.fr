@@ -67,6 +67,17 @@ export function ActualiteArticlePage() {
         )}
       </header>
 
+      {article.image ? (
+        <figure className="card" style={{ padding: 0, overflow: 'hidden' }}>
+          <img
+            src={article.image}
+            alt={article.title}
+            style={{ width: '100%', maxHeight: '22rem', objectFit: 'cover', display: 'block' }}
+            loading="eager"
+          />
+        </figure>
+      ) : null}
+
       <article className="card news-item">
         <ArticleBody contentHtml={article.contentHtml} />
         <aside className="card" style={{ marginTop: '2rem', padding: '1.25rem' }}>
