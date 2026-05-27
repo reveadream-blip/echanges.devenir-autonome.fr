@@ -14,6 +14,16 @@ type NewsItem = {
 
 const newsItems: NewsItem[] = [
   {
+    id: 'passer-au-solaire-le-guide-pratique-pour-enfin-devenir-autonome-en-electricite',
+    date: '2026-05-27',
+    tag: 'Actualité',
+    title: 'Passer au solaire : le guide pratique pour enfin devenir autonome en électricité',
+    body:
+      'Qui n’a pas frémi ces derniers mois en ouvrant sa facture d’électricité ? Entre la hausse constante des tarifs réglementés et l’envie grandissante de réduire notre empreinte carbone, l\'indépendance énergétique n\'est plus un doux rêve d\'écologiste poussé à l\'extrême. C’est devenu un projet de vie concret, accessible et, disons-le franchement, particulièrement intelligent.',
+    link: { href: '/actualites/passer-au-solaire-le-guide-pratique-pour-enfin-devenir-autonome-en-electricite', label: 'Lire l\'article' },
+  },
+
+  {
     id: 'le-climatiseur-camerounais-qui-rafraichit-autrement',
     date: '2026-05-26',
     tag: 'Communauté',
@@ -32,9 +42,9 @@ const newsItems: NewsItem[] = [
     id: 'penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite',
     date: '2026-05-25',
     tag: 'Communauté',
-    title: '🔴 Pénuries : On fait le point ensemble (sans panique, mais avec lucidité)',
+    title: 'Pénuries : on fait le point ensemble',
     body:
-      'Salut à tous, Vous avez sûrement suivi les dernières annonces de Macron et les infos qui tournent en boucle sur les risques de pénuries. Entre les tensions au Moyen-Orient (notamment autour du détroit d’Ormuz) et les stations-service qui tirent la langue, on sent que le climat se tend. L\'idée ici n\'est pas de souffler…',
+      'Carburant, énergie, courses : un tour d’horizon sans alarmisme, avec des réflexes concrets pour s’organiser entre voisins.',
     link: { href: '/actualites/penuries-on-fait-le-point-ensemble-sans-panique-mais-avec-lucidite', label: 'Lire l\'article' },
     facebookLink: {
       href: 'https://www.facebook.com/share/p/1K4ADgcmFd/',
@@ -44,30 +54,12 @@ const newsItems: NewsItem[] = [
   },
 
   {
-    id: 'cat-oeuf-volaille',
-    date: '2026-05-22',
-    tag: 'Plateforme',
-    title: 'Catégorie Oeuf / Volaille sur le troc alimentaire',
-    body:
-      'Les annonces d’œufs fermiers, volailles et produits associés ont désormais leur filtre dédié dans la rubrique Troc et résilience.',
-    link: { href: '/troc', label: 'Voir les annonces troc' },
-  },
-  {
-    id: 'messagerie',
-    date: '2026-05-01',
-    tag: 'Fonctionnalité',
-    title: 'Messagerie entre participants',
-    body:
-      'Échangez en privé à partir d’une annonce pour convenir du rendez-vous, sans publier d’adresse précise sur la fiche publique.',
-    link: { href: '/connexion', label: 'Se connecter' },
-  },
-  {
     id: 'groupe-facebook',
     date: '2026-04-15',
     tag: 'Communauté',
-    title: 'Groupe Facebook « réseau autonomie »',
+    title: 'Le groupe Facebook du réseau',
     body:
-      'Discussions, appels à l’entraide et coordination locale : rejoignez le groupe pour suivre l’actualité du réseau au quotidien.',
+      'C’est là que beaucoup d’échanges commencent : appels à l’aide, retours terrain, liens vers les outils du réseau. Rejoignez-nous si ce n’est pas déjà fait.',
     link: {
       href: 'https://www.facebook.com/groups/reseauautonomie',
       label: 'Rejoindre le groupe',
