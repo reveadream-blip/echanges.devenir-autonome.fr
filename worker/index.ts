@@ -5,6 +5,22 @@ import { handleStripeWebhook } from './stripe-webhook'
 
 const api = createApi()
 
+/** Fichier statique manquant → index.html pour le routeur React (si run_worker_first couvre la route). */
+async function serveAssets(request: Request, assets: Fetcher): Promise<Response> {
+  const response = await assets.fetch(request)
+  if (response.status !== 404 || (request.method !== 'GET' && request.method !== 'HEAD')) {
+    return response
+  }
+
+  const path = new URL(request.url).pathname
+  if (path.startsWith('/api') || /\.[a-zA-Z0-9]+$/.test(path)) {
+    return response
+  }
+
+  const indexRequest = new Request(new URL('/index.html', request.url), request)
+  return assets.fetch(indexRequest)
+}
+
 export default {
   async fetch(
     request: Request,
@@ -23,7 +39,7 @@ export default {
       return api.fetch(request, env, ctx)
     }
     if (env.ASSETS) {
-      return env.ASSETS.fetch(request)
+      return serveAssets(request, env.ASSETS)
     }
     return new Response(
       'Frontend non compilé — exécutez npm run build ou utilisez Vite en dev (proxy /api).',

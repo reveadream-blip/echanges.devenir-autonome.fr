@@ -188,7 +188,7 @@ export function HomePage() {
           <h2>Activer le troc alimentaire</h2>
           <p className="muted">
             Frais, sec, conserves, semences : échange direct ou points de
-            résilience. Les annonces sont conçues pour aller vite, sans friction.
+            résilience. Publiez ou répondez en quelques minutes.
           </p>
           <Link className="text-link" to="/troc">
             Voir les annonces →

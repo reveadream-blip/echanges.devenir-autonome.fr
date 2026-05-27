@@ -11,8 +11,10 @@ compatibility_date = "2025-05-01"
 [assets]
 directory = "./dist"
 binding = "ASSETS"
-# Sans ceci, les URLs sans fichier statique (ex. /sitemap.xml) tombent sur le fallback SPA → index.html.
-run_worker_first = true
+# Routes React (/actualites, /troc/…, etc.) : index.html si pas de fichier statique.
+not_found_handling = "single-page-application"
+# Worker uniquement pour l’API et le sitemap ; le reste passe par les assets (SPA).
+run_worker_first = ["/api/*", "/sitemap.xml"]
 
 [[d1_databases]]
 binding = "DB"

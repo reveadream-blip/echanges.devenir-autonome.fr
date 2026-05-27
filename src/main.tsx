@@ -11,3 +11,5 @@ createRoot(document.getElementById('root')!).render(
     <App />
   </StrictMode>,
 )
+
+document.querySelectorAll('.static-page-heading').forEach((el) => el.remove())

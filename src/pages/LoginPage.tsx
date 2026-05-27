@@ -42,8 +42,8 @@ export function LoginPage() {
         <p className="eyebrow">Compte</p>
         <h1>Connexion</h1>
         <p className="lede">
-          Cookies HTTP uniquement (session). Pas de mot de passe stocké en
-          clair côté serveur (PBKDF2).
+          Connectez-vous pour publier une annonce, répondre aux messages et gérer
+          votre profil.
         </p>
       </header>
 

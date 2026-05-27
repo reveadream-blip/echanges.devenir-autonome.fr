@@ -46,17 +46,38 @@ export function ActualiteArticlePage() {
   return (
     <div className="stack-lg news-page">
       <header className="page-header">
-        <p className="eyebrow">{article.category}</p>
+        <div className="news-item__meta" style={{ marginBottom: '0.75rem' }}>
+          <span className="pill">{article.category}</span>
+          <span className="pill">Résilience</span>
+          {article.facebookUrl ? (
+            <span className="news-item__source">Réseau Autonomie &amp; Solidarité</span>
+          ) : null}
+        </div>
         <h1>{article.title}</h1>
-        <p className="lede">
-          <time dateTime={article.date}>{formatDate(article.date)}</time>
-          {' · '}
-          Réseau Autonomie &amp; Solidarité
-        </p>
+        {article.facebookUrl ? (
+          <p className="lede small muted">
+            Publié sur le groupe Facebook <em>Réseau Autonomie &amp; Solidarité — Troc, Savoir-Faire, Anti-Gaspi &amp; Résilience</em>
+          </p>
+        ) : (
+          <p className="lede">
+            <time dateTime={article.date}>{formatDate(article.date)}</time>
+            {' · '}
+            Réseau Autonomie &amp; Solidarité
+          </p>
+        )}
       </header>
 
       <article className="card news-item">
         <ArticleBody contentHtml={article.contentHtml} />
+        <aside className="card" style={{ marginTop: '2rem', padding: '1.25rem' }}>
+          <p className="eyebrow">Ressources du réseau</p>
+          <ul className="small muted" style={{ listStyle: 'none', padding: 0, margin: '0.75rem 0 0' }}>
+            <li><a href="https://devenirautonome.fr" target="_blank" rel="noreferrer">DevenirAutonome.fr</a> — protocoles autonomie</li>
+            <li><a href="https://echanges.devenirautonome.fr" target="_blank" rel="noreferrer">Troc &amp; Savoir-Faire</a> — troc de proximité</li>
+            <li><a href="https://ecoconso-comparatif.fr" target="_blank" rel="noreferrer">EcoConso-Comparatif</a> — solaire et énergie</li>
+            <li><a href="https://freshrescue.app" target="_blank" rel="noreferrer">FreshRescue</a> — anti-gaspi</li>
+          </ul>
+        </aside>
         <div className="news-item__actions">
           {article.facebookUrl ? (
             <a
@@ -65,7 +86,7 @@ export function ActualiteArticlePage() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Voir sur Facebook
+              Voir la publication originale
             </a>
           ) : null}
           <Link className="btn btn-primary btn-sm" to="/actualites">

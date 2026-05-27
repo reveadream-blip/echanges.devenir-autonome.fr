@@ -68,49 +68,34 @@ export function InformationsPage() {
       </section>
 
       <section className="card prose-block">
-        <h2>Confidentialité et tension sociale</h2>
+        <h2>Confidentialité et localisation</h2>
         <p className="muted small">
-          Prévoir <strong>zones approximatives</strong>, pas d’adresse précise
-          dans les fiches publiques. Les rendez-vous et détails sensibles devront
-          passer par une messagerie privée (structure prévue en base, UI à
-          brancher). Minimiser la donnée stockée ; privilégier HTTPS et des
-          sauvegardes chiffrées côté infrastructure.
+          Les fiches publiques n’affichent qu’une <strong>zone approximative</strong>,
+          jamais votre adresse exacte. Pour convenir d’un rendez-vous ou échanger
+          un numéro, utilisez la <strong>messagerie privée</strong> liée à chaque
+          annonce. Nous ne revendons pas vos données et ne diffusons pas de publicité
+          ciblée.
         </p>
       </section>
 
       <section className="card prose-block">
-        <h2>Architecture technique (instance actuelle)</h2>
+        <h2>Écosystème du réseau</h2>
         <p className="muted small">
-          Frontend React + Vite + PWA ; API sur Cloudflare Worker avec base{' '}
-          <strong>D1</strong> (SQLite). Sessions HTTP-only ; mots de passe
-          dérivés en PBKDF2 côté Worker. Les coordonnées précises restent en base
-          mais ne sont renvoyées à l’interface qu’après arrondi (~1,1 km) ; la
-          carte dessine des cercles indicatifs.
+          Cette plateforme fait partie de l’initiative{' '}
+          <a href="https://devenirautonome.fr/" target="_blank" rel="noreferrer">
+            Devenir autonome
+          </a>
+          . D’autres outils complémentaires (anti-gaspi, comparatif énergie, etc.)
+          sont accessibles depuis le{' '}
+          <a
+            href="https://www.facebook.com/groups/reseauautonomie"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            groupe Facebook du réseau
+          </a>
+          .
         </p>
-      </section>
-
-      <section className="card prose-block">
-        <h2>Intégration au site « Devenir autonome »</h2>
-        <ul className="checklist muted small">
-          <li>
-            <strong>Sous-domaine</strong> (
-            <a href="https://echanges.devenirautonome.fr/">echanges.devenirautonome.fr</a>
-            ) : découplage technique et SEO distinct du site vitrine, souvent
-            le meilleur compromis robustesse / simplicité.
-          </li>
-          <li>
-            <strong>Répertoire / sous-chemin</strong> (
-            <span className="nowrap">devenirautonome.fr/echanges</span>) : peut
-            renforcer le maillage SEO si le CMS principal gère bien les SPA
-            (fallback HTML, pas de 404 sur refresh). Nécessite une config
-            reverse-proxy ou hébergeur compatible.
-          </li>
-          <li>
-            <strong>Lien profond + iframe</strong> : rapide mais UX et SEO
-            généralement inférieurs ; cookies tiers / sandbox à traiter avec
-            prudence.
-          </li>
-        </ul>
       </section>
 
       <section id="partenaires" className="card prose-block info-partner-block">

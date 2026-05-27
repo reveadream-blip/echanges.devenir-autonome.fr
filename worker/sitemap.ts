@@ -1,4 +1,5 @@
 import type { Env } from './app'
+import { NETWORK_ARTICLES } from '../src/data/networkArticles'
 
 const DEFAULT_BASE = 'https://echanges.devenirautonome.fr'
 
@@ -44,6 +45,22 @@ function buildStaticUrls(base: string): string[] {
   return lines
 }
 
+function buildNewsArticleUrls(base: string): string[] {
+  const lines: string[] = []
+  for (const article of NETWORK_ARTICLES) {
+    const loc = `${base}/actualites/${article.id}`
+    lines.push('  <url>')
+    lines.push(`    <loc>${escapeXml(loc)}</loc>`)
+    if (article.date) {
+      lines.push(`    <lastmod>${escapeXml(article.date)}</lastmod>`)
+    }
+    lines.push('    <changefreq>monthly</changefreq>')
+    lines.push('    <priority>0.7</priority>')
+    lines.push('  </url>')
+  }
+  return lines
+}
+
 export async function sitemapXmlResponse(env: Env): Promise<Response> {
   const base = (env.PUBLIC_SITE_URL ?? DEFAULT_BASE).replace(/\/$/, '')
 
@@ -51,6 +68,7 @@ export async function sitemapXmlResponse(env: Env): Promise<Response> {
     '<?xml version="1.0" encoding="UTF-8"?>',
     '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
     ...buildStaticUrls(base),
+    ...buildNewsArticleUrls(base),
   ]
 
   try {

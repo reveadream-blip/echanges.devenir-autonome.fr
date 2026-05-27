@@ -177,9 +177,8 @@ export function SoutenirPage() {
             <h3>À quoi sert concrètement mon don ?</h3>
             <p className="muted small">
               L&apos;intégralité des contributions sert à maintenir l&apos;indépendance du réseau.
-              Cela finance l&apos;hébergement sécurisé sur Cloudflare, les noms de domaine de nos
-              applications (Troc, FreshRescue, etc.) et le développement technique pour améliorer
-              les outils de partage.
+              Cela finance les serveurs, les noms de domaine (Troc, FreshRescue, etc.) et les
+              évolutions demandées par les membres du réseau.
             </p>
           </article>
           <article className="support-faq-item">

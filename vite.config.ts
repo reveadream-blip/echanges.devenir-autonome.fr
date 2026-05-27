@@ -1,6 +1,11 @@
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
 import { defineConfig, loadEnv } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
+import { prerenderSeoHtml } from './scripts/prerender-seo'
+
+const projectRoot = path.dirname(fileURLToPath(import.meta.url))
 
 function escapeHtmlAttr(s: string) {
   return s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
@@ -70,6 +75,14 @@ export default defineConfig(({ mode }) => {
           navigateFallback: null,
         },
       }),
+      {
+        name: 'prerender-seo',
+        apply: 'build',
+        enforce: 'post',
+        closeBundle() {
+          prerenderSeoHtml(path.join(projectRoot, 'dist'))
+        },
+      },
     ],
   }
 })
