@@ -8,6 +8,7 @@ type NewsItem = {
   tag: string
   title: string
   body: string
+  image?: string
   link?: { href: string; label: string; external?: boolean }
   facebookLink?: { href: string; label: string; external?: boolean }
 }
@@ -20,9 +21,11 @@ const newsItems: NewsItem[] = [
     title: 'Passer au solaire : le guide pratique pour enfin devenir autonome en électricité',
     body:
       'Qui n’a pas frémi ces derniers mois en ouvrant sa facture d’électricité ? Entre la hausse constante des tarifs réglementés et l’envie grandissante de réduire notre empreinte carbone, l\'indépendance énergétique n\'est plus un doux rêve d\'écologiste poussé à l\'extrême. C’est devenu un projet de vie concret, accessible et, disons-le franchement, particulièrement intelligent.',
+    image: '/images/actualites/passer-au-solaire-le-guide-pratique-pour-enfin-devenir-autonome-en-electricite.webp',
     link: { href: '/actualites/passer-au-solaire-le-guide-pratique-pour-enfin-devenir-autonome-en-electricite', label: 'Lire l\'article' },
   },
 
+  
   
   {
     id: 'le-climatiseur-camerounais-qui-rafraichit-autrement',
@@ -123,6 +126,15 @@ export function ActualitesPage() {
                 <span className="news-item__source">Réseau Autonomie &amp; Solidarité</span>
               ) : null}
             </div>
+            {item.image ? (
+              <img
+                src={item.image}
+                alt={item.title}
+                className="news-item__cover"
+                loading="lazy"
+                style={{ width: '100%', maxHeight: '14rem', objectFit: 'cover', borderRadius: '0.5rem', marginBottom: '1rem' }}
+              />
+            ) : null}
             <h2 className="news-item__title">{item.title}</h2>
             <p className="muted">{item.body}</p>
             {(item.link || item.facebookLink) ? (
