@@ -14,16 +14,7 @@ type NewsItem = {
 }
 
 const newsItems: NewsItem[] = [
-  {
-    id: 'passer-au-solaire-le-guide-pratique-pour-enfin-devenir-autonome-en-electricite',
-    date: '2026-05-27',
-    tag: 'Actualité',
-    title: 'Passer au solaire : le guide pratique pour enfin devenir autonome en électricité',
-    body:
-      'Qui n’a pas frémi ces derniers mois en ouvrant sa facture d’électricité ? Entre la hausse constante des tarifs réglementés et l’envie grandissante de réduire notre empreinte carbone, l\'indépendance énergétique n\'est plus un doux rêve d\'écologiste poussé à l\'extrême. C’est devenu un projet de vie concret, accessible et, disons-le franchement, particulièrement intelligent.',
-    link: { href: '/actualites/passer-au-solaire-le-guide-pratique-pour-enfin-devenir-autonome-en-electricite', label: 'Lire l\'article' },
-  },
-
+  
   
   
   
